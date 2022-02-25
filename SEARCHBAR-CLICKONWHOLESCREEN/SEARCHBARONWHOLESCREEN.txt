@@ -1,0 +1,106 @@
+//search-bar-html
+	<div class="searchbar-fullscreen">
+			   <span class="searchBar" onclick="openSearchHero()"><i class="fas fa-search"></i></span>
+			</div>		
+
+<!-- searchbar-modal-click-start -->
+<!-- modal-insert-on-footer-open-on-click -->
+		<div id="FullScreenOverlay" class="overlaySearch">
+			<span class="closebtn" onclick="closeSearchHero()" title="Close overlaySearch">×</span>
+			<div class="overlay-content">
+				<form action="">
+					<div class="fieldWrapper">
+						<input type="text" class="modalInput" placeholder="Search" name="search">
+						<button type="submit" class="modalBtn gen-gradient"><i class="fa fa-search"></i></button>
+					</div>
+				</form>
+			</div>
+	         </div>
+		<!-- searchbar-modal-click-end -->
+
+
+//searchbar-css-start
+/* header search modal starts here  */
+.searchBar i {
+    font-size: 20px;
+}
+.overlaySearch {
+    height: 22%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+}
+  .overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+  }
+  .overlaySearch .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+  }
+  .overlaySearch .closebtn:hover {
+    color: #ccc;
+  }
+  .overlaySearch input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+    box-shadow: none;
+    outline: none;
+  }
+  .overlaySearch input[type=text]:hover {
+    background: #f1f1f1;
+  }
+  .overlaySearch .modalBtn {
+    float: left;
+      width: 20%;
+      padding: 15px;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      outline: none;
+      border: none;
+      background: #ff9700;
+  }
+  .overlaySearch .modalBtn i{
+    font-size: 25px;
+  }
+  .overlaySearch .modalBtn:hover {
+    color: #000000;
+  }
+  .overlaySearch .fieldWrapper{
+    width: 100%;
+    overflow: hidden;
+    height: 55px;
+    border-radius: 20px;
+  }
+  /* searchbar-css-start */
+
+
+
+
+// full page searchbar-custom-js
+function openSearchHero() {
+  document.getElementById("FullScreenOverlay").style.display = "block";
+}
+
+function closeSearchHero() {
+  document.getElementById("FullScreenOverlay").style.display = "none";
+}

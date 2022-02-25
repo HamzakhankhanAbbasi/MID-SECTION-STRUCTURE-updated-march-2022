@@ -1,0 +1,101 @@
+//togglebutton-css and responsive navbar toggle-button
+
+
+put this code at the end of header
+<a href="javascript:void(0)" class="mobile-toggle"><i class="fas fa-bars"></i></a>
+
+//put this div on html jis div ko toggle may hide karna hay
+<div class="mobile-wrap"> 
+   <button type="button" class="toogle-close-btn">
+      <i class="fas fa-times"></i>
+    </button> 
+    //data
+</div>
+put this css on responsive-file on 1024 screen or any screen
+    .mobile-wrap {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center !important;
+        width: 100%;
+        max-width: 320px;
+        height: 100%;
+        background: #fff;
+        z-index: 9999;
+        overflow: auto;
+        transition: all 0.5s ease-in-out;
+    }
+   .mobile-wrap.active {
+	     left: 0;
+   }
+    .mobile-toggle {
+       display: block;
+    }
+    .mobile-toggle {
+        font-size: 18px;
+        padding: 6px 14px;
+        max-width: 40px;
+        height: 40px;
+        width: 100%;
+        margin: 0px 30px 10px;
+    }
+     .toogle-close-btn {
+        font-size: 24px;
+        color: #fff;
+        background: transparent;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #ff9700;
+        border-radius: 50%;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+    }
+    .toogle-close-btn i{
+        color: #ff9700;
+        font-size:20px;
+    } 
+
+
+
+put this code on css style.css
+.mobile-toggle {
+    display: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff !important;
+    background: #ff9700;
+    padding: 4px 12px;
+    border-radius: 5px;
+    max-width: 43px;
+    height: 40px;
+    width: 100%;
+    margin: -50px 10px;
+}
+.mobile-menu.active {
+   left: 0;
+}
+.toogle-close-btn {
+   display: none;
+}
+
+
+//put this code on custon js
+$('.mobile-toggle').click(function(){
+	$('.mobile-wrap').addClass('active');
+});
+// Mobile Navigation Close Button Js
+$('.toogle-close-btn').click(function(){
+	$('.mobile-wrap').removeClass('active');
+});
+
+OR
+
+Sirf toggle par open karwana hon
+$('.mobile-toggle').click(function(){
+	$('.mobile-wrap').toggleClass('active');
+});
+
+

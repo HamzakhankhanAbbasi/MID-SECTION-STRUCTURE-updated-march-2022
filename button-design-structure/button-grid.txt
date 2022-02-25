@@ -1,0 +1,23 @@
+
+//button-html-start
+<div class="slide-button">
+   <a href="javascript:void(0)" class="cta-btn yellow-bg">Shop Now</a>
+</div>
+
+//button-css-start
+.cta-btn {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 50px;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+}
+.yellow-bg {
+    background: #ffa200;
+}
+.cta-btn:hover {
+    color: #fff;
+    background: #046564;
+}

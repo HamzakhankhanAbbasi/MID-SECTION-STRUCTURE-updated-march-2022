@@ -1,0 +1,10 @@
+//banner-css
+.index-sec1 {
+    background: url(../images/banner-slide.jpg) no-repeat;
+    background-size: cover;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}

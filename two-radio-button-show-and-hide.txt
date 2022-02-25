@@ -1,0 +1,33 @@
+	
+//show and hide with radio-button-script-1
+
+<script>
+	    $(document).ready(function () {                            
+            $("#radio-1, #radio-3").change(function () {
+                if ($("#radio-1").is(":checked")) {
+                    $('.leaves-detail-1').show();
+                    $('.leaves-detail-2').hide();
+                }
+                else if ($("#radio-3").is(":checked")) {
+                    $('.leaves-detail-2').show();
+                    $('.leaves-detail-1').hide();
+                }
+            });        
+        });
+</script>
+
+
+//show and hide with radio-button-script-2
+
+$(document).ready(function () {                            
+    $("#contracts, #retails").change(function () {
+        if ($("#contracts").is(":checked")) {
+            $('.addres').show();
+            $('.addres-retail').hide();
+        }
+        else if ($("#retails").is(":checked")) {
+            $('.addres-retail').show();
+            $('.addres').hide();
+        }
+    });        
+});
