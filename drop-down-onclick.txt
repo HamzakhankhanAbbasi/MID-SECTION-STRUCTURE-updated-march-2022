@@ -1,0 +1,61 @@
+//drop-down-jquery
+
+//script
+
+   <script>
+            $('.nav').on('click', function() {
+            if ($('.dop-list').css('opacity') == 0) {
+                $('.dop-list').css('opacity', 1);
+                $('.dop-list').css('z-index', 9999);
+            }
+            else {
+                $('.dop-list').css('opacity', 0);
+                $('.dop-list').css('z-index', -100);
+            }
+        });
+    </script>  
+
+
+//html
+
+   <section class="index-sec-2">
+        <div class="container">
+            <div class="nav">
+                <span class="icon">
+                <i class="fas fa-user"></i>
+                </span>
+            </div>
+            <div class="drop-down">
+                <ul class="dop-list">
+                    <li>nokia</li>
+                    <li>nokia2</li>
+                    <li>nokia3</li>
+                    <li>nokia4</li>
+                    <li>nokia5</li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+
+//css
+
+  .dop-list {
+                max-width: 170px;
+                width: 100%;
+                background-color: #0f5132;
+                color: #fff;
+                opacity:0;
+            }
+            .dop-list li {
+                padding: 10px 0px;
+            }
+            .dop-list li {
+                padding: 10px;
+            }
+            .dop-list li:hover {
+                background: red;
+                width: 100%;
+            }

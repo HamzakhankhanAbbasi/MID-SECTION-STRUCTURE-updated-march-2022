@@ -1,0 +1,93 @@
+//drop-down-on-hover-with-inner-drop-down
+
+
+//html
+
+      <div class="navigation-wrap">
+                            <ul class="list-wrap">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li class="service-list list-toggle">Services<span class="caretdownn"><i class="fas fa-caret-down"></i></span>
+                                <ul class="child-list child-wrap">
+                                    <li class="mobile-services">mobile service
+                                        <ul class="mobiles-name">
+                                            <li>Samsung</li>
+                                            <li>Infinix</li>
+                                            <li>Notepad</li>
+                                            <li>Iphones</li>
+                                            <li>galaxy</li>
+                                        </ul>
+                                    </li>
+                                    <li>Iphone service</li>
+                                    <li>Infinix service</li>
+                                    <li>nokia</li>
+                                    <li>Samsung</li>
+                                </ul>                           
+                            </li>
+                            <li>Contact us</li>
+                            </ul>
+                        </div> 
+
+
+//css
+
+  .navigation-wrap {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                min-height: 215px;
+            }
+            .list-wrap li {
+                display: inline;
+                padding: 0 40px;
+            }
+            .caretdownn {
+                font-size: 17px;
+                margin: 0px 0px 0px 10px;
+            }
+            .service-list{
+                position:relative;
+                cursor: pointer;
+                transition: all 0.5 ease-in-out;
+            }
+            .child-list {
+                position: absolute;
+                top: 30px;
+                right: 0;
+                opacity: 0;
+                background-color: #607d8b;
+                max-width: 300px;
+                width: 100%;
+                min-height: 260px;
+                color: #fff;
+                padding-top: 20px;
+            }
+            .child-list li {
+                display: flex;
+                align-items: center;
+                padding: 14px 20px 10px 30px;
+            }
+            .service-list:hover .child-list{
+              opacity:1;
+            }
+            .child-list li:hover{
+                background:#ff0000;
+            }
+ 
+            .mobile-service{
+                position:relative;
+            }
+            .mobiles-name {
+                position: absolute;
+                left: 100%;
+                top: 14%;
+                background-color: #10489d;
+                max-width: 300px;
+                width:100%;
+                padding: 5px 0;
+                min-height: 224px;
+                opacity:0;
+            }
+            .mobile-services:hover .mobiles-name{
+                opacity:1;
+            }
